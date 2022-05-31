@@ -17,15 +17,18 @@ namespace Clara34
             InitializeComponent();
         }
 
+        public Productos producto;
+
         private void button2_Click(object sender, EventArgs e)
         {
-
+            producto = new Productos(textBoxNombre.Text, textBoxCategoria.Text, textBoxDescripcion.Text, Int32.Parse(textBoxPrecio.Text) );
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
+            this.Close();
 
         }
 
