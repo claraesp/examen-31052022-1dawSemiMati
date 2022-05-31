@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAñadir = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,12 +51,13 @@
             this.label1.Text = "Comprador:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // textBoxNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(549, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 23);
-            this.textBox1.TabIndex = 1;
+            this.textBoxNombre.Location = new System.Drawing.Point(549, 64);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(139, 23);
+            this.textBoxNombre.TabIndex = 1;
+            this.textBoxNombre.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
             // 
             // listBox1
             // 
@@ -80,14 +81,15 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Lista de los productos:";
             // 
-            // button1
+            // buttonAñadir
             // 
-            this.button1.Location = new System.Drawing.Point(149, 263);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 52);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Añadir productos";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAñadir.Location = new System.Drawing.Point(149, 263);
+            this.buttonAñadir.Name = "buttonAñadir";
+            this.buttonAñadir.Size = new System.Drawing.Size(192, 52);
+            this.buttonAñadir.TabIndex = 4;
+            this.buttonAñadir.Text = "Añadir productos";
+            this.buttonAñadir.UseVisualStyleBackColor = true;
+            this.buttonAñadir.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -97,6 +99,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Añadir a lista de la compra";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
@@ -134,10 +137,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonAñadir);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Hola soy el TPV rey";
@@ -150,10 +153,10 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
+        private TextBox textBoxNombre;
         private ListBox listBox1;
         private Label label2;
-        private Button button1;
+        private Button buttonAñadir;
         private Button button2;
         private PictureBox pictureBox1;
         private Label label3;
